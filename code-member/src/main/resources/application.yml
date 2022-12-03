@@ -1,0 +1,19 @@
+server:
+  port: 9000
+
+spring:
+  datasource:
+    #MySQL配置
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://8.134.120.93:3306/code-member
+    username: root
+    password: root
+
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
