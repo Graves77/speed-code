@@ -22,6 +22,5 @@ public class UserController {
     public R sign(@Valid @RequestBody User user){
         userService.save(user);
         return R.ok("注册成功");
-
     }
 }
