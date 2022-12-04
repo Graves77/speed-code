@@ -15,14 +15,36 @@ public class UserServiceImpl extends ServiceImpl<UserDao, User>implements UserSe
     @Autowired
     private UserDao userDao;
 
+//    @Override
+//    public Boolean signUser(String password,String confirm,String phone,String email) {
+//        User user = new User();
+//        if(!confirm.equals(password)){
+//            return false;
+//        }
+//        userDao.save(password, email, phone);
+//        return true;
+//    }
+
     @Override
-    public Boolean signUser(String password,String confirm,String phone,String email) {
-        User user = new User();
-        if(!confirm.equals(password)){
-            return false;
+    public Boolean login(User user) {
+        String phone = user.getPhone();
+        String password = user.getPassword();
+        String truePassword =userDao.findPassword(phone);
+        //User userByPhone = userDao.selectUserByPhone(phone);
+        if(password.equals(truePassword)){
+            return true;
         }
-        userDao.save(password, email, phone);
-        return true;
+        else return false;
+    }
+
+    @Override
+    public Integer selectByPhone(String phone) {
+        return userDao.selectUserByPhone(phone);
+    }
+
+    @Override
+    public long loginIdByphone(User user) {
+        return userDao.selectUserIdByPhone(user.getPhone());
     }
 
 }

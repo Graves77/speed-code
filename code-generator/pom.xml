@@ -3,10 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.0</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <artifactId>speed-code</artifactId>
+        <groupId>com.code.speed-code</groupId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.code.generator</groupId>
     <artifactId>code-generator</artifactId>
@@ -14,7 +13,7 @@
     <name>code-generator</name>
     <description>code-generator</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>1.8</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -25,7 +24,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
         </dependency>
 
     </dependencies>

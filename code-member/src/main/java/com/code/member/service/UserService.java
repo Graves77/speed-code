@@ -7,6 +7,11 @@ import org.springframework.stereotype.Service;
 
 public interface UserService extends IService<User> {
 
-    Boolean signUser(String password, String confirm, String phone, String email);
+    //Boolean signUser(String password, String confirm, String phone, String email);
 
+    Boolean login(User user);
+
+    Integer selectByPhone(String phone);
+
+    long loginIdByphone(User user);
 }
