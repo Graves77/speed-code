@@ -84,8 +84,8 @@ public class Generator {
      * 测试代码生成主类scanAndGenerator是否管用
      */
     public static void main(String[] args) throws Exception {
-        String templatePath="D:\\工作\\学习资料\\FreeMarker\\模板";
-        String outPath="D:\\工作\\学习资料\\FreeMarker\\生成路径";
+        String templatePath="H:";
+        String outPath="H:";
         Generator generator=new Generator(templatePath,outPath);
         Map<String,Object> dataModel=new HashMap<>();
         dataModel.put("username","张三");
