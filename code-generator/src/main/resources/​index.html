@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<table style="height: 100%;width: 100%;" border="3">
+    <form action="">
+        <tr>
+            <td>数据库类型</td>
+            <td><select name="dbKind" id="dbKind">
+                <option value="MYSQL">MYSQL</option>
+                <option value="ORACLE">ORACLE</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>数据库IP</td>
+            <td><input id="ip" type="text" name="ip" required><span style="color: red;">*必填项</span></td>
+        </tr>
+        <tr>
+            <td>端口号</td>
+            <td><input id="port" type="text" name="port" required><span style="color: red;">*必填项</span></td>
+        </tr>
+        <tr>
+            <td>用户名</td>
+            <td><input id="username" type="text" name="username" required><span style="color: red;">*必填项</span></td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td><input id="password" type="password" name="password" required><span style="color: red;">*必填项</span></td>
+        </tr>
+        <tr>
+            <td><input id="test" type="button" value="测试连接"><span style="color: red;">*必选项</span></td>
+            <td>选择数据库  <select name="databases" id="databases">
+            </select></td>
+            <td><input id="next" type="button" value="下一步"></td>
+        </tr>
+    </form>
+</table>
+<script th:src="@{../jquery.min.js}"></script>
+<script>
+    $("#test").click(function () {
+        $.post(
+            "/testConnection",
+            {dbKind:$("#dbKind").val(),ip:$("#ip").val(),port:$("#port").val(),username:$("#username").val(),password:$("#password").val()},
+            function (data) {
+                if(data.length>0){
+                    alert("连接成功");
+                    var temp="";
+                    for(var i=0;i<data.length;i++){
+                        temp+='<option value="'+data[i]+'">'+data[i]+'</option>';
+                    }
+                    $("#databases").html(temp);
+                }else{
+                    alert("连接失败");
+                }
+            },
+            "json"
+        );
+    });
+    $("#next").click(function () {
+        location.href="/enter1?databases="+$("#databases").val()+"&username="+$("#username").val()+"&password="+$("#password").val();
+    });
+</script>

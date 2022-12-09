@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<table style="height: 100%;width: 100%;" border="3">
+    <form action="/create" method="post">
+        <tr>
+            <td>模板</td>
+            <td><select name="dbKind" id="dbKind">
+                <option value="springboot程序的模板">springboot程序的模板</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>代码生成路径</td>
+            <td><input id="fileUrl" type="text" name="fileUrl" /><span style="color: red;">*必填项</span></td>
+        </tr>
+        <tr>
+            <td>项目名</td>
+            <td><input id="projectEngName" type="text" name="projectEngName" required></td>
+        </tr>
+        <tr>
+            <td>包名</td>
+            <td><input id="packagename" type="text" name="packagename" required><span style="color: red;">*必填项（格式必须为com.ftx.demo这种）</span></td>
+        </tr>
+        <tr>
+            <td>项目中文名称</td>
+            <td><input id="projectChinaName" type="text" name="projectChinaName" required></td>
+        </tr>
+        <tr>
+            <td>数据库</td>
+            <td><input id="db" type="text" name="db" th:value="*{databases}" readonly></td>
+        </tr>
+        <tr>
+            <td>用户名</td>
+            <td><input id="root" type="text" name="root" th:value="*{username}" readonly></td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td><input id="psd" type="text" name="psd" th:value="*{password}" readonly></td>
+        </tr>
+        <tr>
+            <td><input id="test" type="submit" value="生成代码"></td>
+            <td><input type="button" value="关闭"></td>
+        </tr>
+    </form>
+</table>

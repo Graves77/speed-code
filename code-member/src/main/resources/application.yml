@@ -5,7 +5,7 @@ spring:
   datasource:
     #MySQL配置
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://8.134.120.93:3306/code-member
+    url: jdbc:mysql://8.134.120.93:3306/code-member?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: root
 
