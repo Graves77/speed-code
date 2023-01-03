@@ -1,8 +1,8 @@
 package com.code.member.entity;
 
 
-import com.code.common.valid.loginGroup;
-import com.code.common.valid.registerGroup;
+import com.code.member.valid.loginGroup;
+import com.code.member.valid.registerGroup;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;

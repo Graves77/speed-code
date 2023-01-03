@@ -1,23 +1,21 @@
 package com.code.member.controller;
 
-import com.code.common.entities.R;
-import com.code.common.exception.BizCodeEnum;
-import com.code.common.valid.loginGroup;
+
+import com.code.member.entity.R;
 import com.code.member.entity.User;
+import com.code.member.exception.BizCodeEnum;
 import com.code.member.service.UserService;
 import com.code.member.utils.JwtUtils;
+import com.code.member.valid.loginGroup;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
 
-
+@CrossOrigin
 @ResponseBody
 @RestController
 @RequestMapping("/user")

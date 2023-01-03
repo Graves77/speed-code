@@ -1,21 +1,19 @@
 package com.code.member.controller;
 
-import com.code.common.entities.R;
-import com.code.common.exception.BizCodeEnum;
-import com.code.common.valid.loginGroup;
-import com.code.common.valid.registerGroup;
+
+import com.code.member.entity.R;
 import com.code.member.entity.User;
+import com.code.member.exception.BizCodeEnum;
 import com.code.member.service.UserService;
 
+import com.code.member.valid.registerGroup;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+@CrossOrigin
 @ResponseBody
 @RestController
 @RequestMapping("/user")

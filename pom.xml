@@ -18,11 +18,34 @@
     <description>parent</description>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>code-member</module>
+<!--    <modules>-->
+<!--        <module>code-member</module>-->
+<!--&lt;!&ndash;        <module>code-generator</module>&ndash;&gt;-->
 <!--        <module>code-generator</module>-->
-        <module>code-common</module>
-    </modules>
+<!--        <module>code-common</module>-->
+<!--    </modules>-->
 
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            <goal>repackage</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-surefire-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <skipTests>true</skipTests>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
 
 </project>

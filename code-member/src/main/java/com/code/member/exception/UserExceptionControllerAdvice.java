@@ -1,8 +1,8 @@
 package com.code.member.exception;
 
 
-import com.code.common.entities.R;
-import com.code.common.exception.BizCodeEnum;
+
+import com.code.member.entity.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.MethodArgumentNotValidException;
