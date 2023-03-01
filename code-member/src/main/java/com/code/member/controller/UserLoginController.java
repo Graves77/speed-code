@@ -26,6 +26,11 @@ public class UserLoginController {
     @Autowired
     private JwtUtils jwtUtils;
 
+    @GetMapping("/test")
+    public String test(){
+        return "test is ok!";
+    }
+
     @RequestMapping("/login")
     public R login(@Validated({loginGroup.class}) @RequestBody User user){
 
